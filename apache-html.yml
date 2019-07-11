@@ -1,0 +1,11 @@
+---
+- hosts: all
+  user: root
+  gather_facts: no
+
+  tasks:
+  - name: copying welcome.html file to apache
+    copy:
+      src: welcome.html
+      dest: /var/www/html/welcome.html
+    
